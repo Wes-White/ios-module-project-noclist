@@ -119,7 +119,15 @@ func findTotals() {
 findTotals()
 
 
+
 //: ## Step 11 (Optional)
 //: Create and call a function that prints the cover names and access levels of all agents, but the list should be sorted by access level, in ascending order.
+func listOfAgents() {
+    let sortedArray = agents.sorted(by: {$0.accessLevel < $1.accessLevel}) //sorting by agent.accessLevel and comparing it to the next
+    for agent in sortedArray{
 
+        print(agent.coverName, agent.accessLevel)
+    }
+}
+listOfAgents()
 
